@@ -1,4 +1,4 @@
-module termi-pom
+module cli-pomodoro
 
 go 1.24.0
 

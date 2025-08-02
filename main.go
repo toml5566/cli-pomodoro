@@ -14,7 +14,7 @@ func main() {
 	)
 
 	if _, err := p.Run(); err != nil {
-		fmt.Printf("Error running TermiPom: %v\n", err)
+		fmt.Printf("Error running %s: %v\n", PROJECT_NAME, err)
 		os.Exit(1)
 	}
 }

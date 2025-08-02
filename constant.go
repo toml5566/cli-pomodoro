@@ -1,5 +1,7 @@
 package main
 
+const PROJECT_NAME = "CLI Pomodoro"
+
 // Timer states
 type SessionType int
 

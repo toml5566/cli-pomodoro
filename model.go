@@ -38,7 +38,7 @@ func initialModel() model {
 
 func (m model) Init() tea.Cmd {
 	return tea.Batch(
-		tea.SetWindowTitle("TermiPom"),
+		tea.SetWindowTitle(PROJECT_NAME),
 		tickCmd(),
 	)
 }
