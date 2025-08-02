@@ -1,4 +1,4 @@
-module cli-pomodoro
+module github.com/toml5566/cli-pomodoro
 
 go 1.24.0
 
