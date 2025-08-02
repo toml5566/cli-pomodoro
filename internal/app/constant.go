@@ -1,4 +1,4 @@
-package main
+package app
 
 const PROJECT_NAME = "CLI Pomodoro"
 

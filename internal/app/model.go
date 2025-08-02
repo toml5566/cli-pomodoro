@@ -1,4 +1,4 @@
-package main
+package app
 
 import (
 	"fmt"
@@ -27,7 +27,7 @@ func tickCmd() tea.Cmd {
 	})
 }
 
-func initialModel() model {
+func InitialModel() model {
 	return model{
 		sessionType:    Focus,
 		timeRemaining:  FocusDuration,
