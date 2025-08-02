@@ -6,6 +6,8 @@ A beautiful, full-screen terminal-based Pomodoro timer built with Go. Stay focus
 ![Bubbletea](https://img.shields.io/badge/TUI-Bubbletea-FF69B4?style=for-the-badge)
 ![Cross Platform](https://img.shields.io/badge/Platform-Cross--Platform-success?style=for-the-badge)
 
+![CLI Pomodoro Screenshot](cli-pomodoro.png)
+
 ## ✨ Features
 
 - **🎯 Full-Screen Experience**: Immersive, distraction-free timer that takes over your entire terminal
