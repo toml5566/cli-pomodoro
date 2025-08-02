@@ -31,8 +31,10 @@ go install github.com/toml5566/cli-pomodoro@latest
 ```bash
 git clone https://github.com/toml5566/cli-pomodoro.git
 cd cli-pomodoro
-go build -o cli-pomodoro
+make build
 ```
+
+The binary will be created in the `bin/` directory.
 
 ## 🎮 Usage
 
@@ -40,6 +42,12 @@ Start your Pomodoro session with a single command:
 
 ```bash
 cli-pomodoro
+```
+
+Or if running from source:
+
+```bash
+make run
 ```
 
 The application will launch in full-screen mode and immediately start a 25-minute focus session.
@@ -100,11 +108,20 @@ The application follows the Model-View-Update (MVU) pattern provided by Bubble T
 
 ```
 cli-pomodoro/
-├── main.go      # Application entry point
-├── model.go     # Core TUI logic and state management
-├── constant.go  # Timer durations, ASCII art, and styling constants
-├── go.mod       # Go module dependencies
-└── README.md    # Project documentation
+├── cmd/
+│   └── cli-pomodoro/
+│       └── main.go          # Application entry point
+├── internal/
+│   └── app/
+│       ├── model.go         # Core TUI logic and state management
+│       └── constant.go      # Timer durations, ASCII art, and styling constants
+├── bin/                     # Built binaries
+├── Makefile                 # Build automation
+├── go.mod                   # Go module dependencies
+├── go.sum                   # Dependency checksums
+├── LICENSE                  # License file
+├── cli-pomodoro.png         # Application screenshot
+└── README.md                # Project documentation
 ```
 
 ### Running in Development
@@ -112,20 +129,25 @@ cli-pomodoro/
 ```bash
 git clone https://github.com/toml5566/cli-pomodoro.git
 cd cli-pomodoro
-go run .
+make run
 ```
 
 ### Building
 
 ```bash
 # Build for current platform
-go build -o cli-pomodoro
+make build
 
 # Cross-compile for different platforms
-GOOS=linux GOARCH=amd64 go build -o cli-pomodoro-linux
-GOOS=windows GOARCH=amd64 go build -o cli-pomodoro-windows.exe
-GOOS=darwin GOARCH=amd64 go build -o cli-pomodoro-macos
+GOOS=linux GOARCH=amd64 go build -o bin/cli-pomodoro-linux cmd/cli-pomodoro/main.go
+GOOS=windows GOARCH=amd64 go build -o bin/cli-pomodoro-windows.exe cmd/cli-pomodoro/main.go
+GOOS=darwin GOARCH=amd64 go build -o bin/cli-pomodoro-macos cmd/cli-pomodoro/main.go
 ```
+
+### Make Commands
+
+- `make run` - Run the application directly from source
+- `make build` - Build the binary to `bin/cli-pomodoro`
 
 ## 🤝 Contributing
 
