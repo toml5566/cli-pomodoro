@@ -23,7 +23,7 @@ A beautiful, full-screen terminal-based Pomodoro timer built with Go. Stay focus
 ### Install from Source
 
 ```bash
-go install github.com/toml5566/cli-pomodoro@latest
+go install github.com/toml5566/cli-pomodoro/cmd/cli-pomodoro@latest
 ```
 
 ### Build Locally
